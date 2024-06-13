@@ -389,13 +389,13 @@ def ordenar_por_fecha(lista:list)->list:
     for i in range (cantidad_elementos(lista)-1):
         for j in range (i+1,cantidad_elementos(lista)):
             if int(lista[i]['Fecha']) > int(lista[j]['Fecha']) and criterio == 'ASC':
-                auxiliar = lista[i]['Fecha']
-                lista[i]['Fecha'] = lista[j]['Fecha']
-                lista[j]['Fecha'] = auxiliar
+                auxiliar = lista[i]
+                lista[i] = lista[j]
+                lista[j] = auxiliar
             if int(lista[i]['Fecha']) < int(lista[j]['Fecha']) and criterio == 'DESC':
-                auxiliar = lista[i]['Fecha']
-                lista[i]['Fecha'] = lista[j]['Fecha']
-                lista[j]['Fecha'] = auxiliar
+                auxiliar = lista[i]
+                lista[i] = lista[j]
+                lista[j] = auxiliar
     
     return lista
 
